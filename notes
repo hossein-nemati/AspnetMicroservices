@@ -3,3 +3,8 @@ The repository pattern have two purposes:
   2: it is a way of centralizing the handling of the domain objects.
 
   acts as a middleware or middle layer between the rest of the application and the data access logic  "make test easy to switch to mock repository"
+
+
+
+
+  Update-Package -ProjectName Catalog.API
