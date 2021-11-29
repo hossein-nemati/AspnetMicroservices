@@ -8,6 +8,8 @@ docker pull mongo  # in solution directory
 #run
 docker run -d -p 27017:27017 --name shopping-mongo mongo  # for create shopping-mongo container
 
+or  check it with this command  => docker ps => docker ps -a    => then  => docker start (4 first letter)
+
 #check it 
 docker ps # show running items
 
