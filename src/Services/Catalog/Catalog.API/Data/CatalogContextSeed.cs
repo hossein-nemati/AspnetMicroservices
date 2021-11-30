@@ -13,7 +13,7 @@ namespace Catalog.API.Data
 
             if (!existProduct)
             {
-                productCollection.InsertManyAsync(GetPreconfigurationProducts());
+                var r = productCollection.InsertManyAsync(GetPreconfigurationProducts());
             }
         }
 
@@ -23,7 +23,7 @@ namespace Catalog.API.Data
             {
                 new Product()
                 {
-                    Id = "id1",
+                    Id = "546c776b3e23f5f2ebdd3b03",
                     Name = "IPhone",
                     Summary = "Summary",
                     Description = "Description",
@@ -33,7 +33,7 @@ namespace Catalog.API.Data
                 },
                 new Product()
                 {
-                    Id = "id2",
+                    Id = "543c776b3e23f5f2ebdd3b03",
                     Name = "Samsung",
                     Summary = "Summary",
                     Description = "Description",
