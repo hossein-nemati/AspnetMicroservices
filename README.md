@@ -10,6 +10,9 @@ docker run -d -p 27017:27017 --name shopping-mongo mongo  # for create shopping-
 
 or  check it with this command  => docker ps => docker ps -a    => then  => docker start (4 first letter)
 
+
+#stop #remove   docker stop "4 digit"   docker rm "4 digit"
+
 #check it 
 docker ps # show running items
 
