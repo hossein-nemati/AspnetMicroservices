@@ -13,9 +13,13 @@ or  check it with this command  => docker ps => docker ps -a    => then  => dock
 
 #stop #remove   docker stop "4 digit"   docker rm "4 digit"
 
+#run docker compose
+docker-compose -f .\docker-compose.yml -f .\docker-compose.override.yml up -d
+
 #check it 
 docker ps # show running items
 
 #run
 docker exec -it shopping-mongo /bin/bash   # open a bash command line to mongodb container # for run mongodb command and access to mongodb 
    => then in opened bash run mongo command to access mongodb 
+
