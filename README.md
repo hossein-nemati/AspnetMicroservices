@@ -31,3 +31,5 @@ docker run -d -p 6379:6379 --name aspnetrun-redis redis
 docker logs -f aspnetrun-redis
 
 docker exec -it aspnetrun-redis /bin/bash
+
+docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
