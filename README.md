@@ -23,3 +23,11 @@ docker ps # show running items
 docker exec -it shopping-mongo /bin/bash   # open a bash command line to mongodb container # for run mongodb command and access to mongodb 
    => then in opened bash run mongo command to access mongodb 
 
+
+
+###################  redis
+docker run -d -p 6379:6379 --name aspnetrun-redis redis
+
+docker logs -f aspnetrun-redis
+
+docker exec -it aspnetrun-redis /bin/bash
