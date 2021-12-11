@@ -2,30 +2,38 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Protobuf Include="Protos\greet.proto" GrpcServices="Server"><IncludeInPackage>false</IncludeInPackage>
-</Protobuf>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.41.0" />
     <PackageReference Include="Npgsql" Version="6.0.1" />
     <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Entities\" />
     <None Remove="Repositories\" />
     <None Remove="Extentions\" />
+    <None Remove="Protos\" />
+    <None Remove="Services\" />
+    <None Remove="Protos\discount.proto" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Mapper\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Repositories\" />
     <Folder Include="Extentions\" />
+    <Folder Include="Protos\" />
+    <Folder Include="Services\" />
+    <Folder Include="Mapper\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="Protos\discount.proto" GrpcServices="Server"></Protobuf>
   </ItemGroup>
 </Project>
