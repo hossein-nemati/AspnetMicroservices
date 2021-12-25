@@ -6,6 +6,7 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using Ordering.Application.Contracts.Infrastructure;
 using Ordering.Application.Contracts.Presistence;
+using Ordering.Application.Models;
 using Ordering.Domain.Common.Entities;
 
 namespace Ordering.Application.Features.Orders.Commands.CheckoutOrder
