@@ -5,7 +5,9 @@ using AutoMapper;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using Ordering.Application.Contracts.Presistence;
+using Ordering.Application.Exceptions;
 using Ordering.Application.Features.Orders.Commands.CheckoutOrder;
+using Ordering.Domain.Common.Entities;
 
 namespace Ordering.Application.Features.Orders.Commands.DeleteOrder
 {
@@ -28,7 +30,7 @@ namespace Ordering.Application.Features.Orders.Commands.DeleteOrder
             if (orderToDelete == null)
             {
                 _logger.LogError("Order not exist on database");
-                // throw new NotFoundExeption(nameof(order), request.Id);
+                throw new NotFoundException(nameof(Order), request.Id);
             }
 
             await _orderRepository.DeleteAsync(orderToDelete);
