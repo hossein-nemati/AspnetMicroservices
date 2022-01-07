@@ -14,6 +14,7 @@
     <None Remove="Controllers\" />
     <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Extentions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.2.3" />
@@ -35,5 +36,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Extentions\" />
   </ItemGroup>
 </Project>
