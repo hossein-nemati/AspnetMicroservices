@@ -1,15 +1,32 @@
 ﻿using System;
 using System.Threading.Tasks;
+using AutoMapper;
 using EventBus.Messages.Events;
 using MassTransit;
+using MediatR;
+using Microsoft.Extensions.Logging;
 
 namespace Ordering.API.EventBusConsumer
 {
     public class BasketCheckoutConsumer : IConsumer<BasketCheckoutEvent>
     {
-        public Task Consume(ConsumeContext<BasketCheckoutEvent> context)
+        private readonly IMediator _mediator;
+        private readonly IMapper _mapper;
+        private readonly ILogger<BasketCheckoutConsumer> _logger;
+
+        public BasketCheckoutConsumer(IMediator mediator, IMapper mapper, ILogger<BasketCheckoutConsumer> logger)
         {
-            throw new NotImplementedException();
+            _mediator = mediator;
+            _mapper = mapper;
+            _logger = logger;
+        }
+
+        public async Task Consume(ConsumeContext<BasketCheckoutEvent> context)
+        {
+            var command = _mapper.Map<BasketCheckoutEvent>(context.Message);
+            var result = await _mediator.Send(command);
+
+            _logger.LogInformation("BasketCheckoutEvent consumed successfully. Created Order Id : {newOrderId}", result);
         }
     }
 }

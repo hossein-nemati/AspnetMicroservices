@@ -20,6 +20,7 @@
     <None Remove="MassTransit.RabbitMQ" />
     <None Remove="MassTransit.AspNetCore" />
     <None Remove="EventBusConsumer\" />
+    <None Remove="Mapping\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.2.3" />
@@ -49,5 +50,6 @@
     <Folder Include="Controllers\" />
     <Folder Include="Extentions\" />
     <Folder Include="EventBusConsumer\" />
+    <Folder Include="Mapping\" />
   </ItemGroup>
 </Project>
