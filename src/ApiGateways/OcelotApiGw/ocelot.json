@@ -1,0 +1,10 @@
+﻿using System;
+namespace OcelotApiGw
+{
+ public class ocelot
+ {
+   public ocelot()
+   {
+   }
+ }
+}
