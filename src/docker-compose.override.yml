@@ -136,5 +136,5 @@ services:
         - discount.api
         - ordering.api
     ports:
-      - "80"
+      - "8010:80"
 
