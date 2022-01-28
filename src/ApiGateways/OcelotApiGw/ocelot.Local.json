@@ -98,7 +98,7 @@
       ],
       "UpstreamPathTemplate": "/Discount",
       "UpstreamHttpMethod": [ "PUT", "POST" ]
-    }
+    },
     // Order API
     {
       "DownstreamPathTemplate": "/api/v1/Order/{userName}",
