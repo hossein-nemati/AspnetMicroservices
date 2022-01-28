@@ -9,8 +9,10 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Ocelot" />
+    <None Remove="Ocelot.Cache.CacheManager" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Ocelot" Version="17.0.1" />
+    <PackageReference Include="Ocelot.Cache.CacheManager" Version="17.0.1" />
   </ItemGroup>
 </Project>
